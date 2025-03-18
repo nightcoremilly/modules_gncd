@@ -88,7 +88,7 @@ class Sup(loader.Module):
 
 
     @loader.command()
-    async def чат инфо(self, message: Message) -> None:
+    async def чат_инфо(self, message: Message) -> None:
         """Показывает информацию о чате."""
         response = await self.message_q(
             "чат инфо", self.blood_bot, mark_read=True, delete=True
