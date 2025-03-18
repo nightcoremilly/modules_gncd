@@ -67,3 +67,30 @@ class Sup(loader.Module):
             "инфо", self.blood_bot, mark_read=True, delete=True
         )
         await utils.answer(message, response.text)
+
+
+    @loader.command()
+    async def стата(self, message: Message) -> None:
+        """Показывает статистику бота."""
+        response = await self.message_q(
+            "стата", self.blood_bot, mark_read=True, delete=True
+        )
+        await utils.answer(message, response.text)
+
+
+    @loader.command()
+    async def ид(self, message: Message) -> None:
+        """Покажет айди пользователя, бота и ваш айди. (Чтобы узнать чужой айди, вам нужно чтобы бот был взаимодействен с ботом!)"""
+        response = await self.message_q(
+            "ид", self.blood_bot, mark_read=True, delete=True
+        )
+        await utils.answer(message, response.text)
+
+
+    @loader.command()
+    async def чат инфо(self, message: Message) -> None:
+        """Показывает информацию о чате."""
+        response = await self.message_q(
+            "чат инфо", self.blood_bot, mark_read=True, delete=True
+        )
+        await utils.answer(message, response.text)
