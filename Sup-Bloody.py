@@ -29,8 +29,8 @@ class SupBloodModule(loader.Module):
 
     def __init__(self):
         self.name = self.strings["name"]
-        self.blood_bot = "@bloody_support_bot"  # TODO: Использовать ID вместо username
-        self.blood_id = 7972872820 # TODO: Проверять что это int
+        self.blood_bot = "@bloody_support_bot" 
+        self.blood_id = 7972872820 
         self.client = None
         self.db = None
         self.myid = None
@@ -49,7 +49,7 @@ class SupBloodModule(loader.Module):
     async def message_q(
         self,
         text: str,
-        entity: Union[int, str], # Поддержка ID и username
+        entity: Union[int, str], 
         mark_read: bool = False,
         delete: bool = False,
     ) -> Union[Message, None]:
@@ -69,7 +69,7 @@ class SupBloodModule(loader.Module):
                 return response
         except Exception as e:
             logging.exception(f"Ошибка при взаимодействии с ботом {entity}: {e}")
-            return None  # Важно возвращать None в случае ошибки
+            return None  
 
 
     async def _send_command_to_bot(self, message: Message, command: str):
