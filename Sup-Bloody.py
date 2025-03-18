@@ -14,6 +14,7 @@ from telethon.tl.types import Message
 from telethon.tl.custom import Message
 from hikka import utils, loader
 from telethon.utils import get_display_name
+import Union
 
 @loader.tds
 class SupBloodModule(loader.Module):
