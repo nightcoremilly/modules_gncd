@@ -10,7 +10,7 @@ from .. import utils, loader
 
 @loader.tds
 class name(loader.Module):
-    """❗ Управление ботом в локальном доступе, т.к бот не может вступать в другие чаты."""
+    """Управление ботом в локальном доступе, т.к бот не может вступать в другие чаты."""
 
     strings = {
         "name": "bloody-Support",
@@ -58,9 +58,9 @@ class name(loader.Module):
             return response
 
     @loader.command()
-    async def info_command(self, message: Message) -> None:
-        """описание команды"""
+    async def info(self, message: Message) -> None:
+        """Покажет вам информацию о боте."""
         response = await self.message_q(
-            "info", self.username_bot, mark_read=True, delete=True
+            "info", self.info_command, mark_read=True, delete=True
         )
         await utils.answer(message, response.text)
