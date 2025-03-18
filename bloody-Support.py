@@ -22,7 +22,7 @@ class name(loader.Module):
     }
 
     def init(self):
-        self.name = self.strings["name"]
+        self.name = self.strings["bloody-Support"]
         self.username_bot = "@bloody_support_bot"
         # self.название_твоего_бота = "@iris_moon_bot"
         self.iris_id = 7972872820
