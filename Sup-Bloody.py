@@ -10,7 +10,7 @@ from .. import utils, loader
 
 @loader.tds
 class Sup(loader.Module):
-    """❗ Управление ботом в локальном доступе, т.к бот не может вступать в другие чаты."""
+    """Управление ботом в локальном доступе, т.к бот не может вступать в другие чаты."""
 
     strings = {
         "name": "Sup-Blood",
@@ -53,8 +53,17 @@ class Sup(loader.Module):
 
     @loader.command()
     async def факт(self, message: Message) -> None:
-        """Выводит рандом факт"""
+        """Говорит рандомные факт в мире."""
         response = await self.message_q(
             "факт", self.blood_bot, mark_read=True, delete=True
+        )
+        await utils.answer(message, response.text)
+
+
+    @loader.command()
+    async def инфо(self, message: Message) -> None:
+        """Показывает информацию о боте."""
+        response = await self.message_q(
+            "инфо", self.blood_bot, mark_read=True, delete=True
         )
         await utils.answer(message, response.text)
