@@ -50,10 +50,8 @@ class SupBloodModule(loader.Module):
     async def message_q(
         self,
         text: str,
-        entity: Union[int, str], 
         mark_read: bool = False,
         delete: bool = False,
-    ) -> Union[Message, None]:
         """Отправляет сообщение и возвращает ответ."""
         try:
             async with self.client.conversation(entity) as conv:
