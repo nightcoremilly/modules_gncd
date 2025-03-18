@@ -80,7 +80,7 @@ class Sup(loader.Module):
 
     @loader.command()
     async def ид(self, message: Message) -> None:
-        """Покажет айди пользователя, бота и ваш айди. (Чтобы узнать чужой айди, вам нужно чтобы бот был взаимодействен с ботом!)"""
+        """Покажет айди пользователя, бота и ваш айди. (Чтобы узнать чужой айди, вам нужно чтобы пользователь и вы были взаимодействены с ботом!)"""
         response = await self.message_q(
             "ид", self.blood_bot, mark_read=True, delete=True
         )
